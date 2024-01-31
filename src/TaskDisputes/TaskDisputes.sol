@@ -7,6 +7,11 @@ import {ITaskDisputes, ITasks, IDAOManager, IDAO} from "./ITaskDisputes.sol";
 
 contract TaskDisputes is ERC165, ITaskDisputes {
     mapping(IDAO dao => DaoInfo info) private daoInfo;
+    ITasks private immutable tasks;
+
+    constructor(ITasks _tasks) {
+        tasks = _tasks;
+    }
 
     /// @inheritdoc ERC165
     function supportsInterface(bytes4 _interfaceId) public view virtual override returns (bool) {
@@ -64,12 +69,12 @@ contract TaskDisputes is ERC165, ITaskDisputes {
         IDAO.Action[] memory disputeActions = new IDAO.Action[](1);
         {
             bytes memory callData = abi.encodeWithSelector(
-                _disputeInfo.tasks.completeByDispute.selector,
+                tasks.completeByDispute.selector,
                 _disputeInfo.taskId,
                 _disputeInfo.partialNativeReward,
                 _disputeInfo.partialReward
             );
-            disputeActions[0] = IDAO.Action(address(_disputeInfo.tasks), 0, callData);
+            disputeActions[0] = IDAO.Action(address(tasks), 0, callData);
         }
 
         // This only works for DAOs governed with Aragons MajorityVoting

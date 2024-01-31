@@ -27,7 +27,6 @@ interface ITaskDrafts {
     /// @param budget The budget of the created task.
     /// @param preapproved The preapproved applicants of the created task.
     struct CreateTaskInfo {
-        ITasks tasks;
         string metadata;
         uint64 deadline;
         address manager;

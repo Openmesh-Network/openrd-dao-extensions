@@ -1,31 +1,31 @@
+import { zeroAddress } from "viem";
 import { Address, Deployer } from "../web3webdeploy/types";
-import { deployCounter } from "./counters/Counter";
-import { deployProxyCounter } from "./counters/ProxyCounter";
 
 export interface DeploymentSettings {
-  startingNumber: bigint;
+  tasks: Address;
 }
 
 export interface Deployment {
-  counter: Address;
-  proxyCounter: Address;
+  taskDisputes: Address;
+  taskDrafts: Address;
 }
 
 export async function deploy(
   deployer: Deployer,
   settings?: DeploymentSettings
 ): Promise<Deployment> {
-  const counter = await deployCounter(deployer);
-  const proxyCounter = await deployProxyCounter(deployer, counter);
-  await deployer.execute({
-    id: "InitialCounterNumber",
-    abi: "Counter",
-    to: counter,
-    function: "setNumber",
-    args: [settings?.startingNumber ?? BigInt(3)],
+  const taskDisputes = await deployer.deploy({
+    id: "TaskDisputes",
+    contract: "TaskDisputes",
+    args: [settings?.tasks ?? zeroAddress],
+  });
+  const taskDrafts = await deployer.deploy({
+    id: "TaskDrafts",
+    contract: "TaskDrafts",
+    args: [settings?.tasks ?? zeroAddress],
   });
   return {
-    counter: counter,
-    proxyCounter: proxyCounter,
+    taskDisputes: taskDisputes,
+    taskDrafts: taskDrafts,
   };
 }

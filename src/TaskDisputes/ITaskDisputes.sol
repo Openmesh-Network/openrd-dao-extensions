@@ -28,7 +28,6 @@ interface ITaskDisputes {
     /// @param partialNativeReward Complete with how much of the native reward.
     /// @param partialReward Complete with how much of the reward.
     struct DisputeInfo {
-        ITasks tasks;
         uint256 taskId;
         uint96[] partialNativeReward;
         uint88[] partialReward;

@@ -7,6 +7,11 @@ import {ITaskDrafts, ITasks, IDAOManager, IDAO} from "./ITaskDrafts.sol";
 
 contract TaskDrafts is ERC165, ITaskDrafts {
     mapping(IDAO dao => DaoInfo info) private daoInfo;
+    ITasks private immutable tasks;
+
+    constructor(ITasks _tasks) {
+        tasks = _tasks;
+    }
 
     /// @inheritdoc ERC165
     function supportsInterface(bytes4 _interfaceId) public view virtual override returns (bool) {
@@ -43,7 +48,7 @@ contract TaskDrafts is ERC165, ITaskDrafts {
         IDAO.Action[] memory createTaskActions = new IDAO.Action[](1);
         {
             bytes memory callData = abi.encodeWithSelector(
-                _taskInfo.tasks.createTask.selector,
+                tasks.createTask.selector,
                 _taskInfo.metadata,
                 _taskInfo.deadline,
                 _taskInfo.manager,
@@ -51,7 +56,7 @@ contract TaskDrafts is ERC165, ITaskDrafts {
                 _taskInfo.budget,
                 _taskInfo.preapproved
             );
-            createTaskActions[0] = IDAO.Action(address(_taskInfo.tasks), _taskInfo.nativeBudget, callData);
+            createTaskActions[0] = IDAO.Action(address(tasks), _taskInfo.nativeBudget, callData);
         }
 
         // This only works for DAOs governed with Aragons MajorityVoting
