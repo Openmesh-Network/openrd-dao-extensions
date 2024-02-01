@@ -2,14 +2,15 @@
 pragma solidity ^0.8.0;
 
 import {ERC165} from "../../lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol";
+import {ClaimReverseENS} from "../../lib/ens-reverse-registrar/src/ClaimReverseENS.sol";
 
 import {ITaskDrafts, ITasks, IDAOManager, IDAO} from "./ITaskDrafts.sol";
 
-contract TaskDrafts is ERC165, ITaskDrafts {
+contract TaskDrafts is ERC165, ClaimReverseENS, ITaskDrafts {
     mapping(IDAO dao => DaoInfo info) private daoInfo;
     ITasks private immutable tasks;
 
-    constructor(ITasks _tasks) {
+    constructor(ITasks _tasks, address _admin, address _reverseRegistar) ClaimReverseENS(_reverseRegistar, _admin) {
         tasks = _tasks;
     }
 
