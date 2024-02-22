@@ -5,7 +5,7 @@ import {ITasks} from "../../lib/openrd-foundry/src/ITasks.sol";
 import {IDAOManager, IDAO} from "../../lib/trustless-management/src/IDAOManager.sol";
 
 interface ITaskDrafts {
-    event TaskDraftCreated(IDAO indexed _dao, CreateTaskInfo info, address governancePlugin, uint256 proposalId);
+    event TaskDraftCreated(IDAO indexed dao, CreateTaskInfo info, address governancePlugin, uint256 proposalId);
 
     /// @notice A container for all info related to a certain DAO.
     /// @param governancePlugin The contract where to create the proposals. (Currently this only supports MajorityVoting plugins from Aragon)

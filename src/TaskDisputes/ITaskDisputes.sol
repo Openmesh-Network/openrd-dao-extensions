@@ -8,7 +8,7 @@ interface ITaskDisputes {
     error Underpaying();
     error TransferToDAOFailed();
 
-    event DisputeCreated(IDAO indexed _dao, DisputeInfo dispute, address governancePlugin, uint256 proposalId);
+    event DisputeCreated(IDAO indexed dao, DisputeInfo dispute, address governancePlugin, uint256 proposalId);
 
     /// @notice A container for all info related to a certain DAO.
     /// @param disputeCost How much native currency should be paid to be allowed to create a dispute in this DAO.
