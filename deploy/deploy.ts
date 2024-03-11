@@ -12,22 +12,22 @@ import {
   deployTaskDrafts,
 } from "./extensions/TaskDrafts";
 
-export interface DeploymentSettings {
+export interface OpenRDDaoExtensionsDeploymentSettings {
   tasksDeployment: TasksDeployment;
   taskDisputeDeploymentSettings: Omit<DeployTaskDisputesSettings, "tasks">;
   taskDraftsDeploymentSettings: Omit<DeployTaskDraftsSettings, "tasks">;
   forceRedeploy?: boolean;
 }
 
-export interface Deployment {
+export interface OpenRDDaoExtensionsDeployment {
   taskDisputes: Address;
   taskDrafts: Address;
 }
 
 export async function deploy(
   deployer: Deployer,
-  settings?: DeploymentSettings
-): Promise<Deployment> {
+  settings?: OpenRDDaoExtensionsDeploymentSettings
+): Promise<OpenRDDaoExtensionsDeployment> {
   if (settings?.forceRedeploy !== undefined && !settings.forceRedeploy) {
     return await deployer.loadDeployment({ deploymentName: "latest.json" });
   }
