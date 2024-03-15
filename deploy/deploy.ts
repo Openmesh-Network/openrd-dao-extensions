@@ -6,11 +6,11 @@ import {
 import {
   DeployTaskDisputesSettings,
   deployTaskDisputes,
-} from "./extensions/TaskDisputes";
+} from "./internal/TaskDisputes";
 import {
   DeployTaskDraftsSettings,
   deployTaskDrafts,
-} from "./extensions/TaskDrafts";
+} from "./internal/TaskDrafts";
 
 export interface OpenRDDaoExtensionsDeploymentSettings {
   tasksDeployment: TasksDeployment;
