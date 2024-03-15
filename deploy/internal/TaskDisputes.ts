@@ -9,10 +9,12 @@ export async function deployTaskDisputes(
   deployer: Deployer,
   settings: DeployTaskDisputesSettings
 ) {
-  return await deployer.deploy({
-    id: "TaskDisputes",
-    contract: "TaskDisputes",
-    args: [settings.tasks],
-    ...settings,
-  });
+  return await deployer
+    .deploy({
+      id: "TaskDisputes",
+      contract: "TaskDisputes",
+      args: [settings.tasks],
+      ...settings,
+    })
+    .then((deployment) => deployment.address);
 }
