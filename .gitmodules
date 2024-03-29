@@ -16,3 +16,6 @@
 [submodule "lib/openmesh-admin"]
 	path = lib/openmesh-admin
 	url = https://github.com/plopmenz/openmesh-admin
+[submodule "lib/trustless-actions"]
+	path = lib/trustless-actions
+	url = https://github.com/Plopmenz/trustless-actions
