@@ -7,13 +7,6 @@
 [submodule "lib/openrd-foundry"]
 	path = lib/openrd-foundry
 	url = https://github.com/plopmenz/openrd-foundry
-[submodule "lib/trustless-management"]
-	path = lib/trustless-management
-	url = https://github.com/plopmenz/trustless-management
-[submodule "lib/openzeppelin-contracts"]
-	path = lib/openzeppelin-contracts
-	url = https://github.com/openzeppelin/openzeppelin-contracts
-	branch = release-v5.0
 [submodule "lib/openmesh-admin"]
 	path = lib/openmesh-admin
 	url = https://github.com/plopmenz/openmesh-admin
