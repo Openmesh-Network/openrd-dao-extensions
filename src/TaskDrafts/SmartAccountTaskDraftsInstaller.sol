@@ -34,4 +34,8 @@ contract SmartAccountTaskDraftsInstaller is SmartAccountPaidActionInstaller {
     function grantPermissions() internal override {
         grantFunctionAccess(address(tasks), tasks.createTask.selector);
     }
+
+    function revokePermissions() internal override {
+        revokeFunctionAccess(address(tasks), tasks.createTask.selector);
+    }
 }

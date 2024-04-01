@@ -34,4 +34,8 @@ contract SmartAccountTaskDisputeInstaller is SmartAccountPaidActionInstaller {
     function grantPermissions() internal override {
         grantFunctionAccess(address(tasks), tasks.completeByDispute.selector);
     }
+
+    function revokePermissions() internal override {
+        revokeFunctionAccess(address(tasks), tasks.completeByDispute.selector);
+    }
 }
