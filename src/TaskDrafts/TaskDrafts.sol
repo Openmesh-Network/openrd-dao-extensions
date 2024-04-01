@@ -8,7 +8,7 @@ import {OpenmeshENSReverseClaimable} from "../../lib/openmesh-admin/src/Openmesh
 import {ITaskDrafts, ITasks, IDAO} from "./ITaskDrafts.sol";
 
 contract TaskDrafts is CreateTrustlessAction, PaidAction, OpenmeshENSReverseClaimable, ITaskDrafts {
-    ITasks private immutable tasks;
+    ITasks public immutable tasks;
 
     constructor(ITasks _tasks) {
         tasks = _tasks;

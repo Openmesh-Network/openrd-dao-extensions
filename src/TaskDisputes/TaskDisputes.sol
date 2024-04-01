@@ -9,7 +9,7 @@ import {ITasks} from "../../lib/openrd-foundry/src/ITasks.sol";
 import {ITaskDisputes, IDAO} from "./ITaskDisputes.sol";
 
 contract TaskDisputes is CreateTrustlessAction, PaidAction, OpenmeshENSReverseClaimable, ITaskDisputes {
-    ITasks private immutable tasks;
+    ITasks public immutable tasks;
 
     constructor(ITasks _tasks) {
         tasks = _tasks;
