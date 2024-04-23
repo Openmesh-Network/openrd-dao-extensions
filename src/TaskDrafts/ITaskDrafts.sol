@@ -28,7 +28,7 @@ interface ITaskDrafts {
     /// @param _dao The dao requested to create the task.
     /// @param _metadata Metadata of the proposal.
     /// @param _managementInfo The information related to creating the action.
-    /// @param _trustlessActionsInfo The infromation related to executing the action.
+    /// @param _trustlessActionsInfo The information related to executing the action.
     /// @param _taskInfo The task to be created if the proposal passes.
     /// @dev Does not approve the budget for spending. The DAO should approve the budget in advance (select ERC20s can have a high allowance set)
     function createDraftTask(

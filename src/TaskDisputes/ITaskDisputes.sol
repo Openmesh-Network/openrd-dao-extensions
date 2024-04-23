@@ -18,7 +18,7 @@ interface ITaskDisputes {
     /// @param _dao The dao requested to resolve the dispute.
     /// @param _metadata Metadata of the proposal.
     /// @param _managementInfo The information related to creating the action.
-    /// @param _trustlessActionsInfo The infromation related to executing the action.
+    /// @param _trustlessActionsInfo The information related to executing the action.
     /// @param _disputeInfo The proposed dispute.
     function createDispute(
         IDAO _dao,
