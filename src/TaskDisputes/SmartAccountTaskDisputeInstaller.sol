@@ -9,7 +9,7 @@ import {
     IPaidAction
 } from "../../lib/trustless-actions/src/smart-account-installers/SmartAccountPaidActionInstaller.sol";
 
-import {ITasks} from "../../lib/openrd-foundry/src/ITasks.sol";
+import {ITasks} from "../../lib/openrd/src/ITasks.sol";
 
 contract SmartAccountTaskDisputeInstaller is SmartAccountPaidActionInstaller {
     ITasks public immutable tasks;

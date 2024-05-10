@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import {ITasks} from "../../lib/openrd-foundry/src/ITasks.sol";
+import {ITasks} from "../../lib/openrd/src/ITasks.sol";
 import {ICreateTrustlessAction, IDAO} from "../../lib/trustless-actions/src/extensions/ICreateTrustlessAction.sol";
 
 interface ITaskDrafts {

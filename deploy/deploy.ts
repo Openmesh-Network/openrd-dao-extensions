@@ -2,7 +2,7 @@ import { Address, Deployer } from "../web3webdeploy/types";
 import {
   TasksDeployment,
   deploy as tasksDeploy,
-} from "../lib/openrd-foundry/deploy/deploy";
+} from "../lib/openrd/deploy/deploy";
 import {
   DeployTaskDisputesSettings,
   deployTaskDisputes,
@@ -52,7 +52,7 @@ export async function deploy(
     ...(settings?.taskDraftsDeploymentSettings ?? {}),
   });
 
-  const deployment = {
+  const deployment: OpenRDDaoExtensionsDeployment = {
     taskDisputes: taskDisputes,
     taskDrafts: taskDrafts,
   };

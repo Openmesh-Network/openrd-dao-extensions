@@ -5,7 +5,7 @@ import {CreateTrustlessAction} from "../../lib/trustless-actions/src/extensions/
 import {PaidAction} from "../../lib/trustless-actions/src/extensions/PaidAction.sol";
 import {OpenmeshENSReverseClaimable} from "../../lib/openmesh-admin/src/OpenmeshENSReverseClaimable.sol";
 
-import {ITasks} from "../../lib/openrd-foundry/src/ITasks.sol";
+import {ITasks} from "../../lib/openrd/src/ITasks.sol";
 import {ITaskDisputes, IDAO} from "./ITaskDisputes.sol";
 
 contract TaskDisputes is CreateTrustlessAction, PaidAction, OpenmeshENSReverseClaimable, ITaskDisputes {
