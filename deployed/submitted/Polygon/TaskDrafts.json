@@ -1,8 +1,8 @@
 {
   "type": "deployment",
-  "id": "OpenRDDrafts_11155111",
-  "batch": "testnet",
-  "batchIndex": 2,
+  "id": "TaskDrafts",
+  "batch": "Polygon",
+  "batchIndex": 1,
   "deploymentAddress": "0x1DC2017f07a1996dA3F093c11570dE038088DCa4",
   "constructorArgs": ["0xDdb23dacd41908C4eAE03982B1c6529252A56b62"],
   "to": "0x4e59b44847b379578588920ca78fbf26c0b4956c",
@@ -11,10 +11,10 @@
   "gas": "743700",
   "from": "0x6b221aA392146E31743E1beB5827e88284B09753",
   "transactionSettings": {
-    "chainId": 11155111,
-    "nonce": "3",
-    "baseFee": "1500000000",
-    "priorityFee": "1500000000"
+    "chainId": 137,
+    "nonce": "2",
+    "baseFee": "75000000000",
+    "priorityFee": "30000000000"
   },
   "salt": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000OPENMESH",
   "artifact": {
@@ -346,7 +346,7 @@
   },
   "source": "/home/plopmenz/openmesh-smart-contracts/lib/openrd-dao-extensions",
   "submitted": {
-    "transactionHash": "0x85405654e823e2d7354d8e9264d5b62e9d9733eeb30ad22b0140053e117353dd",
-    "date": "2024-04-24T19:50:10.137Z"
+    "transactionHash": "0x19badbff5c09f0976b267d36902e14741fd28b541365b4db6dc2abd563a4be39",
+    "date": "2024-04-24T21:30:13.738Z"
   }
 }

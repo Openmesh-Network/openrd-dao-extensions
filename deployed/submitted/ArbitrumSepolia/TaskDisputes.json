@@ -1,7 +1,7 @@
 {
   "type": "deployment",
-  "id": "OpenRDDisputes_11155111",
-  "batch": "testnet",
+  "id": "TaskDisputes",
+  "batch": "ArbitrumSepolia",
   "batchIndex": 0,
   "deploymentAddress": "0x945E13855cC61F33373Ec7D42eD30D800A832377",
   "constructorArgs": ["0xDdb23dacd41908C4eAE03982B1c6529252A56b62"],
@@ -11,7 +11,7 @@
   "gas": "537735",
   "from": "0x6b221aA392146E31743E1beB5827e88284B09753",
   "transactionSettings": {
-    "chainId": 11155111,
+    "chainId": 421614,
     "nonce": "2",
     "baseFee": "1500000000",
     "priorityFee": "1500000000"
@@ -268,7 +268,7 @@
   },
   "source": "/home/plopmenz/openmesh-smart-contracts/lib/openrd-dao-extensions",
   "submitted": {
-    "transactionHash": "0xbb51ec7f0c2c1cab9f2fb026ec6ea4fcde34c3c90ef38f499b85f72686d802e3",
-    "date": "2024-04-24T19:50:03.002Z"
+    "transactionHash": "0xff487947793b86c3bfd8224aef4198e93f15d1905f901a5661aa51a020357a56",
+    "date": "2024-04-24T19:35:51.286Z"
   }
 }
